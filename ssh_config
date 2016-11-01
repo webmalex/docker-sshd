@@ -1,0 +1,11 @@
+Host vpn
+	HostName rhost
+	User root
+	Port 2222
+Host vpn1
+	# ssh -fNR 2001:127.0.0.1:22 -p 2222 rhost
+	HostName localhost
+	User root
+	Port 2001
+	StrictHostKeyChecking no
+	ProxyCommand ssh vpn nc %h %p
