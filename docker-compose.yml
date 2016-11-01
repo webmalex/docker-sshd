@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  ssh:
+    build: 
+      context: .
+    image: malex/ssh
+    # image: macropin/sshd
+    volumes:
+      - ./id_rsa.pub:/root/.ssh/authorized_keys
+    ports:
+      - "2222:22"
+    restart: always
+
