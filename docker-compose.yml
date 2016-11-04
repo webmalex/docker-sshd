@@ -8,6 +8,7 @@ services:
     # image: macropin/sshd
     volumes:
       - ./id_rsa.pub:/root/.ssh/authorized_keys
+      - /dev/log:/dev/log
     ports:
       - "2222:22"
     restart: always
