@@ -10,3 +10,4 @@ remote:
 # passwd
 # ssh-keygen
 # ssh-copy-id
+	
